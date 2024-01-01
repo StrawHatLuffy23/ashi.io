@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ashi</title>
+  <link rel="stylesheet" href="./Resources/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&family=Roboto+Condensed:wght@100;200;300&family=Roboto:wght@100;300;400&family=Space+Mono&display=swap" rel="stylesheet">
+</head>
+</head>
+
+<body>
+  <video autoplay muted loop id="background-video">
+    <source src="./Resources/Images/background.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <header class="header">
+    <a href="#" class="logo">ashi</a>
+    <div class="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+  </div>
+    <nav class="navbar">
+      <ul class="nav-list">
+        <li><a href="#">home</a></li>
+        <li><a href="#">what is ashi</a></li>
+        <li><a href="#">team</a></li>
+        <li><a href="#" class="nav-buy-now">connect wallet</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<main class="main">
+  <div class="hero">
+      <h1>Web3 a New Internet</h1>
+      <p>Explore the limitless possibilities of decentralized 
+        web technology. Join us in shaping a more connected, secure, 
+        and transparent digital world.</p>
+        <div class="main-cta">
+          <button><span>Buy Now</span></button>
+          <button><span>Connect Wallet</span></button>
+        </div>
+
+  </div>
+</main>
+
+<div class="portfolio-title">
+  <h1>Our Products</h1>
+</div>
+
+<div class="portfolio">
+  <div class="trading-img">
+    <img src="./Resources/Images/trading.avif" alt="">
+  </div>
+  <div class="trading">
+    <h1>Trading</h1>
+    <p>Welcome to the forefront of cryptocurrency trading. Our platform offers a suite of powerful tools designed to empower traders at every skill level. With our advanced trading tools, you can effortlessly navigate the dynamic world of crypto.</p>   
+  </div>
+  <div class="liquidity">
+    <h1>Liquidity</h1>
+    <p>Experience unparalleled liquidity on our crypto platform, ensuring smooth and efficient trading experiences. Our robust liquidity pool guarantees fast transaction processing, minimal slippage, and optimal pricing, catering to both individual traders and institutional investors. </p>
+  </div>
+  <div class="liquidity-img">
+    <img src="./Resources/Images/liquidity pool.jpg" alt="">
+  </div>
+  <div class="payments-img">
+    <img src="./Resources/Images/payments.webp" alt="">
+  </div>
+  <div class="payments">
+    <h1>Payments</h1>
+    <p>Embrace the future of transactions with our innovative crypto payment solutions. Our platform offers a secure, fast, and versatile payment gateway, facilitating effortless transfers and payments across the globe. </p>
+  </div>
+</div>
+
+<div class="team-title">
+  <h1 class="title">Meet The Team</h1>
+</div>
+<div class="meet-the-team">
+  <div class="team-member">
+    <img src="./Resources/Images/ceo.png" alt="image of alexx">
+    <h1>Alex</h1>
+    <p>CEO</p>
+    <p>Alex is a visionary leader with a passion for Web3.</p>
+    <div class="social-links">
+      <a href="#"><img src="./Resources/Images/linkedin.png" alt="Linkedin"></a>
+      <a href="#"><img src="./Resources/Images/x.png" alt="x.com"></a>
+    </div>
+  </div>
+
+  <div class="team-member">
+    <img src="./Resources/Images/cmo.png" alt="image of alexx">
+    <h1>Hanna</h1>
+    <p>COO</p>
+    <p>Hanna is a visionary leader with a passion for Web3.</p>
+    <div class="social-links">
+      <a href="#"><img src="./Resources/Images/linkedin.png" alt="Linkedin"></a>
+      <a href="#"><img src="./Resources/Images/x.png" alt="x.com"></a>
+    </div>
+  </div>
+
+  <div class="team-member">
+    <img src="./Resources/Images/coo.png" alt="image of alexx">
+    <h1>Anna</h1>
+    <p>CMO</p>
+    <p>Anna is a visionary leader with a passion for Web3.</p>
+    <div class="social-links">
+      <a href="#"><img src="./Resources/Images/linkedin.png" alt="Linkedin"></a>
+      <a href="#"><img src="./Resources/Images/x.png" alt="x.com"></a>
+    </div>
+  </div>
+
+  <div class="team-member">
+    <img src="./Resources/Images/cto.png" alt="image of alexx">
+    <h1>Ali</h1>
+    <p>CTO</p>
+    <p>Ali is a visionary leader with a passion for Web3.</p>
+    <div class="social-links">
+      <a href="#"><img src="./Resources/Images/linkedin.png" alt="Linkedin"></a>
+      <a href="#"><img src="./Resources/Images/x.png" alt="x.com"></a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>All right reserved ashi @2023</p>
+  <a href="#"><img src="./Resources/Images/linkedin.png" alt="Linkedin"></a>
+  <a href="#"><img src="./Resources/Images/x.png" alt="x.com"></a>
+  <p>Contact us: infor@ashi.com</p>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('.hamburger').addEventListener('click', function() {
+      document.querySelector('.header ul').classList.toggle('show');
+    });
+  });
+  </script>
+
+</body>
+</html>

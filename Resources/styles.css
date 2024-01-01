@@ -1,0 +1,458 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Quicksand','Roboto Condensed','Roboto';
+    font-size: 16px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+body{
+    min-height: 100vh;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.2); /* Adjust opacity as needed */
+    z-index: -1; /* Ensure this is above the video but below other content */
+  }
+
+#background-video {
+    position: fixed; /* Use absolute positioning if you only want it in a specific section */
+    right: 0;
+    bottom: 0;
+    min-width: auto; 
+    min-height: 100%;
+    object-fit: cover;
+    width: auto; 
+    height: auto;
+    z-index: -2; /* Places the video behind other content */
+    background-size:cover;
+    overflow: hidden;
+  }
+  
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px 40px;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+  }
+  
+  .nav-buy-now{
+    background-color: rgb(30, 8, 75);
+    padding: 3px 10px;
+    border-radius: 5cm;
+   
+  }
+
+
+.logo{
+    text-decoration: none;
+    font-size: 32px;
+    font-weight: 700;
+    color: white;
+    border-radius: 5cm;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-list{
+    display: flex;
+    list-style: none;
+}
+
+.nav-list a{
+    position: relative;
+    margin-left: 40px;
+    text-decoration: none;
+    font-weight: 500;
+    color: white;
+    font-size: 18px;
+}
+
+main{
+    margin-top: 100px;
+}
+
+.nav-list a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: 0.3s;
+}
+
+.navbar a:hover:before{
+    width: 100%;
+}
+
+.hamburger{
+    display: none;
+}
+
+@media only screen and (max-width: 660px){
+    .header .hamburger{
+        position: absolute; /* Position the hamburger absolutely within its relative parent */
+        top: 0; /* Adjust as needed for your design */
+        right: 20px; /* Adjust the distance from the right as needed */
+        display: flex; /* Use flex to stack the lines vertically */
+        flex-direction: column; /* Stack the divs to form a hamburger icon */
+        justify-content: space-around; /* Space out the lines */
+        align-items: center; /* Center-align the lines */
+        cursor: pointer;
+        z-index: 101; /* Ensure it's above other content */
+        margin-top: 20px
+    }
+
+    .header .hamburger div {
+        width: 30px; /* Width of the hamburger lines */
+        height: 3px; /* Height of the hamburger lines */
+        background-color: white;
+        margin: 5px 0; /* Spacing between the lines */
+        transition: 0.3s;
+        align-items: center;
+      }
+
+      .header ul {
+        display: none; /* Initially hide the menu */
+        flex-direction: column; /* Stack the menu items vertically */
+        position: absolute; /* Absolutely position the dropdown */
+        top: 60px; /* Adjust this value to the height of your header */
+        right: 0; /* Align the dropdown to the right */
+        width: 100%; /* Full width of the screen */
+        z-index: 100;
+        text-align: right;
+        margin-top: 10px;
+        margin-right: 20px;
+        line-height: 30px;
+        align-items: right;
+      }
+
+      .header ul.show {
+        display: flex; /* Show the menu */
+      }
+}
+
+.main{
+    margin-left: 20px;
+}
+
+.hero{
+    color: white;
+    height: 100vh;
+    width: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 220;
+}
+.hero h1{
+    font-size: 42px;
+    font-weight:  700;
+    display: flex;
+    justify-content: center;
+}
+
+.hero p{
+    margin-top: 20px;
+    line-height: 2;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+}
+
+.main-cta{
+    margin-top: 50px;
+    width: 100%;
+    display:flex;
+    justify-content: space-around;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+
+.main-cta button{
+    width: auto;
+    padding: 10px 30px;
+    border-radius: 10px;
+    background-color: #ebebeb; /* Adjust the color to match your button's purple */
+    color: black;
+    padding: 10px 20px; /* Adjust padding to match the size of your button */
+    border: none; /* No border */
+    border-radius: 20px; /* Rounded corners, adjust the px value to match the roundness */
+    font-weight: bold; /* Makes the text bold */
+    text-transform: uppercase; /* Uppercase text */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    outline: none; /* Removes the outline to avoid blue border on click in some browsers */
+    transition: background-color 0.3s ease; /* Smooth background color transition for hover effect */
+}
+
+.main-cta button span {
+    position: relative;
+}
+.hero button:hover{
+    background-color: hsl(248, 77%, 97%);
+}
+
+.main-cta button span::before{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: black;
+    top: 100%;
+    left: 0;
+    transition: 0.3s;
+}
+
+.main-cta button:hover span:before{
+    width: 100%;
+}
+
+@media only screen and (max-width: 660px){
+   
+    main{
+        margin: 0;
+    }
+
+    .header{
+        height: auto;
+    }
+
+    .hero{
+        width: auto;
+    }
+
+    .hero button{
+        width: auto;
+        border-radius: 10px;
+    }
+
+    .hero p{
+        margin-top: 30px;
+        line-height: auto;
+        font-weight: auto;
+        font-size: auto;
+    }
+
+}
+
+.portfolio-title{
+    color: white;
+    text-align: center;
+    width: auto;
+    height: auto;
+    padding: 50px 0;
+}
+
+.portfolio-title h1{
+    font-weight: 700;
+    font-size: 50px;
+}
+
+.portfolio{
+
+    margin-top: 50px;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Defines two columns */
+    grid-template-rows: 1fr 1fr 1fr; /* Defines three rows */
+    width: auto;
+    min-height: 400px;
+    text-align: center;
+}
+
+.trading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 50px;
+    text-align: center;
+    width: auto;
+    margin-bottom: 50px;
+}
+
+.liquidity{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 50px;
+    text-align: center;
+    width: auto;
+    margin-bottom: 50px;
+}
+
+.payments{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 50px;
+    text-align: center;
+    width: auto;
+    margin-bottom: 50px;
+}
+
+.trading h1{
+    font-size: 28px;
+    font-weight: 700;
+    width: auto;
+}
+
+.liquidity h1{
+    font-size: 28px;
+    font-weight: 700;
+    width: auto;
+}
+
+
+.payments h1{
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.trading p{
+    margin-top: 20px;
+    line-height: 1.5;
+    width: auto;
+}
+
+.liquidity p{
+    margin-top: 20px;
+    line-height: 1.5;
+    width: auto;
+}
+
+.payments p{
+    margin-top: 20px;
+    line-height: 1.5;
+    width: auto;
+}
+
+.portfolio img{
+    margin-bottom: 50px;
+    border-radius: 50px;
+    box-shadow: 10px 10px 20px rgba(50, 0, 90, 0.9);
+    height:auto;
+    max-width: 100%;
+    animation: rotateImage 9s infinite alternate linear; /* Adjust the duration as needed */
+    transform-origin: center; /* Ensures the rotation is centered */
+}
+
+@keyframes rotateImage {
+    from {
+      transform: perspective(5000px) rotateY(0deg);
+    }
+    to {
+      transform: perspective(5000px) rotateY(90deg);
+    }
+  }
+
+  @media only screen and (max-width: 660px){
+    .portfolio {
+        grid-template-columns: 1fr; /* Switch to one column on smaller screens */
+    }
+  }
+
+
+.team-title{
+    margin-top: 20px;
+    color: white;
+}
+
+.team-title h1{
+    font-size: 38px;
+    font-weight: 700;
+    text-align: center;
+}
+
+
+.meet-the-team{
+    margin-top: 50px;
+    max-width: 100%;
+    max-height: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: cl;
+    gap: 20px;
+    box-sizing: border-box;
+}
+  
+  .team-member{
+    color: white;
+    width: 100%;
+    text-align: center;
+  }
+
+.team-member h1{
+    font-size: 26px;
+    font-weight: 700;
+    margin: 20px 0;
+}
+
+.team-member p{
+    margin-bottom: 0px;
+    line-height: 1,5;
+    padding-bottom: 10px;
+}
+
+  .team-member img{
+    max-height: 100%;
+    max-width: 100%;
+    border-radius: 30px;
+  }
+
+  .social-links{
+    display: flex;
+    justify-content: space-around;
+    max-width: 50%;
+    margin-left: 25%;
+    margin-top: 20px;
+  }
+
+  .social-links img{
+    max-height: 50px;
+    max-width: 100%;
+  }
+
+  @media only screen and (max-width: 700px){
+    .meet-the-team{
+        flex-direction: column;
+    }
+  }
+
+  footer{
+    margin-top: 50px;
+    color: white;
+    background-color: black;
+    display: flex;
+    max-width: 100%;
+    justify-content:space-around;
+    align-items: center;
+    padding: 10px 0;
+ }
+
+  footer img{
+    max-height: 30px;
+    max-width: 100%;
+  }
